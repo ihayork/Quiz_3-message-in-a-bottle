@@ -26,7 +26,7 @@
 		</a-assets>
 
 		<!-- Main shine -->
-		<a-entity id="shine" name="Shine at bloorview childrens hospital" gltf-model="#modelThing" rotation="0 0 0" gps-entity-place="longitude: -79.371815; latitude: 43.717992;"></a-entity>
+		<a-entity id="shine" name="Shine at Bloorview Children's hospital" gltf-model="#modelThing" rotation="0 0 0" gps-entity-place="longitude: -79.371815; latitude: 43.717992;" ></a-entity>
 		<!-- first copy, 4 units above the main shine -->
 		<a-entity gltf-model="#modelThing" position="0 4 0" rotation="0 0 0" gps-entity-place="longitude: -79.371815; latitude: 43.717992;"></a-entity>
 		<!-- second copy, rotated 270 degrees in the x axis, 180 degrees in the y axis, and 90 degrees in the z axis. 2 units in front of the main shine -->
@@ -37,5 +37,8 @@
 		<a-camera gps-camera rotation-reader></a-camera>
 
 		</a-scene>
+		<div class="centered">
+			<button data-action="change"></button>
+		</div>
 	</body>
 </html>

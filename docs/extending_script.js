@@ -31,9 +31,9 @@ function render() { //function
 
     setModel(models[modelIndex], model); //
 
-    model.setAttribute('animation-mixer', '');
+    model.setAttribute('animation-mixer', ''); //set animation attribute
 
-    scene.appendChild(model);
+    scene.appendChild(model); //insert the model into the document
   });
 }
 
