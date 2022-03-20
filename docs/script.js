@@ -25,14 +25,14 @@ function renderPlaces(places) { //declare function with parameter
         let model = document.createElement('a-entity'); //creates new AR entity to show up in the AR space
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`); //sets attribute for geological based position of object
         model.setAttribute('gltf-model', './assets/MyModel/scene.gltf'); //sets attribute for the model to be used
-        model.setAttribute('rotation', '0 180 0'); //
-        model.setAttribute('animation-mixer', '');
-        model.setAttribute('scale', '0.5 0.5 0.5');
+        model.setAttribute('rotation', '0 180 0'); //sets attribute for rotation of model
+        model.setAttribute('animation-mixer', ''); //sets attribute for animation
+        model.setAttribute('scale', '0.5 0.5 0.5'); //sets attribute for scale of model
 
-        model.addEventListener('loaded', () => {
-            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+        model.addEventListener('loaded', () => { //calls function when the model is loaded
+            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded')) //calls event to say the entity is loaded
         });
 
-        scene.appendChild(model);
+        scene.appendChild(model); //inserts model into the document
     });
 }
