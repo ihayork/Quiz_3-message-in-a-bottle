@@ -25,10 +25,14 @@
 			<a-asset-item id="modelThing" src="./assets/models/scene.gltf">
 		</a-assets>
 
+		<!-- Main shine -->
 		<a-entity id="shine" name="Shine at bloorview childrens hospital" gltf-model="#modelThing" rotation="0 0 0" gps-entity-place="longitude: -79.371815; latitude: 43.717992;"></a-entity>
-		<a-entity gltf-model="#modelThing" position="0 -2 0" rotation="0 0 0" gps-entity-place="longitude: -79.371815; latitude: 43.717992;"></a-entity>
+		<!-- first copy, 4 units above the main shine -->
+		<a-entity gltf-model="#modelThing" position="0 4 0" rotation="0 0 0" gps-entity-place="longitude: -79.371815; latitude: 43.717992;"></a-entity>
+		<!-- second copy, rotated 270 degrees in the x axis, 180 degrees in the y axis, and 90 degrees in the z axis. 2 units in front of the main shine -->
 		<a-entity gltf-model="#modelThing" position="0 0 2" rotation="270 180 90" gps-entity-place="longitude: -79.371815; latitude: 43.717992;"></a-entity>
-		<a-entity gltf-model="#modelThing" position="-2 0 -3" rotation="0 0 0" scale="0.5 0.5 0.5" gps-entity-place="longitude: -79.371815; latitude: 43.717992;"></a-entity>
+		<!-- third copy, scaled to half the size of the main shine. 2 units to the left of the main shine, and 3 units behind it. also rotated -->
+		<a-entity gltf-model="#modelThing" position="-2 0 -3" rotation="135 0 0" scale="0.5 0.5 0.5" gps-entity-place="longitude: -79.371815; latitude: 43.717992;"></a-entity>
 
 		<a-camera gps-camera rotation-reader></a-camera>
 
