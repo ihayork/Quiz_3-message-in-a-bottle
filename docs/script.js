@@ -8,8 +8,8 @@ function staticLoadPlaces() { //declare function
         {
             name: 'MyModel', //declare data called name
             location: { //declare data called location, with two stored variables
-                lat: -79.3718465, //latitude
-                lng: 43.7180795, //longitude
+                lat: 43.717992, //latitude
+                lng: -79.371815, //longitude
             }
         },
     ];
