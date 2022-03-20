@@ -37,9 +37,9 @@ function renderPlaces(places) { //declare function with parameter
     });
 }
 
-let shine = document.getElementById("shine");
+let shine = document.querySelector('#shine');
 
-shine.onclick = (ev) => {
+shine.addEventListener('click', function(ev) {
     ev.stopPropagation();
     ev.preventDefault();
 
@@ -59,5 +59,5 @@ shine.onclick = (ev) => {
             // that will disappear after less than 2 seconds
             container.parentElement.removeChild(container);
         }, 1500);
-     }
- };
+    }
+});
