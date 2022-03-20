@@ -1,31 +1,31 @@
-window.onload = () => {
-     let places = staticLoadPlaces();
-     renderPlaces(places);
+window.onload = () => { //runs function when the window is loaded
+     let places = staticLoadPlaces(); //stores function staticLoadPlaces() in a variable called places
+     renderPlaces(places); //calls function renderPlaces() with another function as the parameter
 };
 
-function staticLoadPlaces() {
-    return [
+function staticLoadPlaces() { //declare function
+    return [ //returns data when the function is called
         {
-            name: 'MyModel',
-            location: {
-                lat: <your-latitude>,
-                lng: <your-longitude>,
+            name: 'MyModel', //declare data called name
+            location: { //declare data called location, with two stored variables
+                lat: -79.3718465, //latitude
+                lng: 43.7180795, //longitude
             }
         },
     ];
 }
 
-function renderPlaces(places) {
-    let scene = document.querySelector('a-scene');
+function renderPlaces(places) { //declare function with parameter
+    let scene = document.querySelector('a-scene'); //get scene object from the html document, store it in a variable for easy access
 
-    places.forEach((place) => {
-        let latitude = place.location.lat;
-        let longitude = place.location.lng;
+    places.forEach((place) => { //calls this function once for every instance of data stored in the variable
+        let latitude = place.location.lat; //store the latitude from places in a variable
+        let longitude = place.location.lng; //do the same for longitude
 
-        let model = document.createElement('a-entity');
-        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-        model.setAttribute('gltf-model', './assets/MyModel/scene.gltf');
-        model.setAttribute('rotation', '0 180 0');
+        let model = document.createElement('a-entity'); //creates new AR entity to show up in the AR space
+        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`); //sets attribute for geological based position of object
+        model.setAttribute('gltf-model', './assets/MyModel/scene.gltf'); //sets attribute for the model to be used
+        model.setAttribute('rotation', '0 180 0'); //
         model.setAttribute('animation-mixer', '');
         model.setAttribute('scale', '0.5 0.5 0.5');
 
